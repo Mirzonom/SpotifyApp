@@ -28,11 +28,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "11"
     }
 }
 
@@ -72,7 +72,7 @@ dependencies {
 
 
     // Navigation Component
-    val nav_version = "2.7.4"
+    val nav_version = "2.5.3"
     implementation ("androidx.navigation:navigation-fragment-ktx:$nav_version")
     implementation ("androidx.navigation:navigation-ui-ktx:$nav_version")
 
@@ -80,7 +80,7 @@ dependencies {
     implementation("com.github.bumptech.glide:glide:4.16.0")
 
     //Dagger - Hilt
-    implementation("com.google.dagger:dagger-android:2.x")
+    implementation("com.google.dagger:dagger-android:2.20")
     implementation("androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha02")
 
     // Timber
@@ -93,7 +93,12 @@ dependencies {
     implementation ("com.google.firebase:firebase-firestore")
 
     // ExoPlayer
-    api ("com.google.android.exoplayer:exoplayer-core:2.11.8")
-    api ("com.google.android.exoplayer:exoplayer-ui:2.11.8")
-    api ("com.google.android.exoplayer:extension-mediasession:2.11.8")
+//    api ("com.google.android.exoplayer:exoplayer-core:2.11.8")
+//    api ("com.google.android.exoplayer:exoplayer-ui:2.11.8")
+//    api ("com.google.android.exoplayer:extension-mediasession:2.11.8")
+
+    implementation ("com.google.android.exoplayer:exoplayer:2.19.1")
+    implementation ("com.google.android.exoplayer:exoplayer-core:2.19.1")
+    implementation ("com.google.android.exoplayer:exoplayer-dash:2.19.1")
+    implementation ("com.google.android.exoplayer:exoplayer-ui:2.19.1")
 }
